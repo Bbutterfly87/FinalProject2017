@@ -1,0 +1,41 @@
+table th {
+	text-align: center;
+	border: 5px;
+	padding: 5px, 5px, 5px, 5px;
+}
+
+table,tr{
+	border-left: 5px;
+	background-color: yellow;
+
+}
+
+table{
+	border-left: 10px solid pink;
+	background-color: pink;
+
+}
+
+
+body{
+	background-image: url(ButterflyBakery.jpg);
+}
+
+img{
+	float: right;
+	border: 5px solid #bf7a8e;
+	border-radius: 50%;
+
+}
+
+h1{
+	font-size: 55px;
+	font-style: italic;
+	color: #bf7a8e;
+	text-shadow: 10px 10px 10px white;
+	text-align: center; 
+}
+div{
+	position: absolute;
+	bottom: 0;
+}

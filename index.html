@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ButterflyBakery</title>
+		
+
+
+		<link rel="stylesheet" type="text/css" href="bakeryStyle.css">
+
+	
+
+			<img id="one" src="chocolateCake.jpg" alt="cCake" style="width:150px;height:150px;">
+        
+        	<img src="VanillaCake.jpg" alt="vCake" alt="avatar" style="width:150px;height:150px;">
+
+		
+			<img src="chocolateChip.jpg" alt="cChip" style="width:150px;height:150px;">	
+		
+			<img src="sugarCookies.jpg" alt="sCook" style="width:150px;height:150px;">
+
+		
+			<img src="sweetPie.jpg" alt="sPie" style="width:150px;height:150px;">
+		
+			<img src="cherryPie.jpg" alt="cPie" style="width:150px;height:150px;">
+		
+			<img src="pinkDonut.jpg" alt="pDonut" style="width: 150px;height: 150px;">
+		
+			<img src="cDonuts.jpg" alt="cDonut" style="width: 150px;height: 150px;">
+
+	</head>
+	<body>
+	<h1> Welcome to Butterfly Bakery</h1>
+	<h2 id="serving">Currently No One In Line</h2>
+
+	<div>
+
+			<img src="coffee.jpg" alt="coff"  style="width:150px;height:150px;">	
+		
+			<img src="icedCoffee.jpg" alt="icedCoff"  style="width:150px;height:150px;">
+		
+			<img src="tea.jpg" alt="tea"  style="width:150px;height:150px;">
+		
+			<img src="milkShake.jpg" alt="mShake"  style="width:150px;height:150px;">
+
+			<img src="velvetCupcakes.jpg" alt="vcCake"  style="width:150px;height:150px;">
+        
+        	<img src="assortedCCake.jpg" alt="aCake" alt="avatar"  style="width:150px;height:150px;">
+
+			<img src="cRolls.jpg" alt="cRolls"  style="width:150px;height:150px;">	
+		
+			<img src="blueMuffin.jpg" alt="bMuff"  style="width:150px;height:150px;">
+
+		
+	</div>
+	<form>
+
+
+		<table id="myTable" style="font size: 70px" align="center"></table><br>
+
+		Customer's Name:<input type="text" id="col1" value=""><br>
+
+		Customer's Order:<input type="text" id="col2" value=""><br>
+
+		<input type="button" onclick="insertRows(this)" value="Add Customer">
+
+		<input type="button" onclick="deleteRow()" value="Customer Served"></p>
+
+
+	</form>	
+
+
+	<script type="text/javascript">
+
+
+	var count = 0;
+	var counts =[];
+
+	function insertRows(x){
+		
+		if(col1.value){
+			count++;
+
+			var table = document.getElementById("myTable");
+
+			var row = table.insertRow(-1); 
+
+			var cell1 = row.insertCell(0);
+
+			var cell2 = row.insertCell(1);
+
+			var cell3 = row.insertCell(2);
+
+			cell1.innerHTML = count; 
+
+			cell2.innerHTML = col1.value;
+
+			cell3.innerHTML = col2.value;
+
+		}
+ 		
+
+ 		if (count!=0) {
+
+ 			document.getElementById("serving").innerHTML = "Currently Serving";
+
+		}else{
+
+			document.getElementById("serving").innerHTML = "Currently No One In Line";
+		}
+ 	}
+
+ 		function deleteRow(){
+
+ 		if(count>0){
+ 			count--;
+ 				document.getElementById("myTable").deleteRow(0);
+ 				replace();
+ 		if(count==0){
+ 				document.getElementById("serving").innerHTML = "Currently No One In Line";
+ 			}
+ 		}
+ 	 
+ 		
+ 	}
+	// will change the current position value, once you serve the customer it will change all the row position number.
+ 		function replace(){
+ 			var table = document.getElementById("myTable"); 
+ 			for( var i = 0; i<table.rows.length; i++ ){
+ 			table.rows[i].cells[0].innerHTML = table.rows[i].cells[0].innerHTML -1 ;
+
+ 		
+ 		}
+ 	}
+
+	</script>
+	</body>
+</html>
